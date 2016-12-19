@@ -1,0 +1,44 @@
+@mixin font-size($font-size, $line-height: true) {
+  font-size:$font-size;
+  font-size:$font-size / $base-font-size*1rem;
+  @if $line-height == true {
+    line-height:ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+  }
+}
+
+@mixin headings($from: 1, $to: 6) {
+  %base-heading {
+    @content
+  }
+
+  @if $from >= 1 and $to <= 6{
+    @for $i from $from through $to{
+      h#{$i}, .text--h#{$i} {
+        @extend %base-heading;
+      }
+
+      .text--h#{$i} {
+        @extend h#{$i};
+      }
+    }
+  }
+}
+
+/**
+ * Text alignment
+ */
+@mixin text-left() {
+    text-align:left;
+}
+
+@mixin text-right() {
+    text-align:right;
+}
+
+@mixin text-centre() {
+    text-align:center;
+}
+
+@mixin text-center() {
+    @include text-centre();
+}

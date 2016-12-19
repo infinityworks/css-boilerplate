@@ -1,0 +1,125 @@
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+
+fieldset {
+  border: none;
+  padding: $base-spacing-unit;
+}
+
+legend {
+  @include font-size($base-font-size * 1.2);
+  color: $healthy-orange;
+  font-weight: bold;
+  width: 100%;
+  padding-bottom: $base-spacing-unit;
+  margin-bottom: $double-spacing-unit;
+}
+
+/**
+ * Labels
+ *
+ * Define a `.label` class as well as a `label` element. This means we can apply
+ * label-like styling to meta-labels for groups of options where a `label`
+ * element is not suitable, e.g.:
+ *
+   <li>
+       <span class=label>Select an option below:</span>
+       <ul class="multi-list  four-cols">
+           <li>
+               <input /> <label />
+           </li>
+           <li>
+               <input /> <label />
+           </li>
+           <li>
+               <input /> <label />
+           </li>
+           <li>
+               <input /> <label />
+           </li>
+       </ul>
+   </li>
+ *
+ */
+label,
+.label{
+  display: block;
+  font-weight: bold;
+
+  font-size: 14px;
+
+  &.label--light {
+    font-weight: 400;
+  }
+}
+
+%input-template {
+  border-radius: $half-spacing-unit;
+  border: 1px solid $input-border-color;
+  padding: $base-spacing-unit $half-spacing-unit;
+  background: $white;
+}
+
+.input-wrapper--full {
+  width: 100%;
+}
+
+.form-field {
+  @extend .cf;
+  @extend %input-template;
+
+  input[type="text"],
+  input[type="number"],
+  .label {
+    display: inline-block;
+    float: left;
+  }
+}
+
+.form-field--focus {
+  border: 1px solid $input-focus-color;
+}
+
+.form-field--error {
+  border: 1px solid $input-error-color;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="password"], input[type="number"], select {
+  border: 0;
+  width: 100%;
+  height: 100%;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input {
+  text-indent: $base-spacing-unit;
+}
+
+input[type="submit"] {
+  text-indent: 0;
+}
+
+select, option {
+	background-color: $white;
+	color: $base-text-color;
+}
+
+select {
+  background: transparent;
+  outline: none;
+  min-width: 180px;
+  line-height: initial;
+  text-indent: 0;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+option {
+  text-indent: 0;
+}

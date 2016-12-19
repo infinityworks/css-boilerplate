@@ -1,0 +1,39 @@
+.circle-icon {
+  display: inline-block;
+  border-radius: 50%;
+  background: $confident-grey;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  width: 50px;
+  height: 50px;
+  margin: 0 15px -15px 0;
+
+  &.small-icon {
+    background-size: initial;
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 0 0;
+  }
+
+  &.white {
+    background-color: $white;
+  }
+}
+
+.twitter {
+  background-image: url(/img/icons/twitter-grey.svg);
+}
+
+.facebook {
+  background-image: url(/img/icons/facebook-grey.svg);
+}
+
+.linkedin {
+  background-image: url(/img/icons/linkedin-grey.svg);
+}
+
+.youtube {
+  background-image: url(/img/icons/youtube-grey.svg);
+}

@@ -1,0 +1,15 @@
+@include headings(1, 6) {
+  color: $healthy-orange;
+}
+
+h4 {
+  font-weight: normal;
+}
+
+.h--grey {
+  color: $confident-grey;
+}
+
+.h--white {
+  color: $white;
+}

@@ -1,0 +1,15 @@
+.logo {
+  display: block;
+  width: 169px;
+  height: 44px;
+}
+
+header .content {
+  padding: ($base-spacing-unit * 4);
+}
+
+@include breakpoint($breakpoint-beta) {
+  header .content {
+    padding: ($base-spacing-unit * 4) 0;
+  }
+}

@@ -1,0 +1,67 @@
+/*--------------------------------------------------------*\
+    Backgrounds
+    ==============
+
+    Ordered from size/importance/order
+    using greek alphabet.
+
+    Alpha: Header,
+    Beta: Navigation,
+    Gamma: Page heading,
+    Delta: Sub-heading
+    etc.
+
+    Classes are reverse-ordered so more important background
+    elements take priority.
+\*--------------------------------------------------------*/
+
+%background--alpha {
+  background: $alpha-background;
+  color: $alpha-text;
+}
+
+%background--beta {
+  background: $beta-background;
+  color: $beta-text;
+}
+
+%background--gamma {
+  background: $gamma-background;
+  color: $gamma-text;
+}
+
+%background--delta {
+  @include linear-gradient($warm-orange, $healthy-orange, $warm-orange);
+  color: $delta-text;
+}
+
+%background--epsilon {
+  @include linear-gradient($responsible-grey, $confident-grey, $responsible-grey);
+  color: $epsilon-text;
+}
+
+%background--zeta {
+  background: $zeta-background;
+  color: $zeta-text;
+
+  a, h1, h2, h3, h4, h5, h6 {
+    color: $zeta-text;
+  }
+}
+
+%background--eta {
+  background: $eta-background;
+  color: $eta-text;
+
+  a, h1, h2, h3, h4, h5, h6 {
+    color: $eta-text;
+  }
+}
+
+.background--eta { @extend %background--eta; }
+.background--zeta { @extend %background--zeta; }
+.background--epsilon { @extend %background--epsilon; }
+.background--delta { @extend %background--delta; }
+.background--gamma { @extend %background--gamma; }
+.background--beta { @extend %background--beta; }
+.background--alpha { @extend %background--alpha; }

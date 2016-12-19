@@ -1,0 +1,21 @@
+footer {
+  .content {
+    padding: ($base-spacing-unit * 4);
+  }
+
+  ul li {
+    display: block;
+  }
+}
+
+@include breakpoint($breakpoint-alpha) {
+  footer ul li {
+    display: inline;
+  }
+}
+
+@include breakpoint($breakpoint-beta) {
+  footer .content {
+    padding: ($base-spacing-unit * 4) 0;
+  }
+}

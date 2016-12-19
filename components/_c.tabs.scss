@@ -1,0 +1,97 @@
+.tabs__options {
+  padding: 0;
+
+  li {
+    position: relative;
+    display: block;
+    border-left: 4px solid $confident-grey;
+    background: $white;
+    margin: 0 $base-spacing-unit $base-spacing-unit;
+    padding: 0 $base-spacing-unit;
+
+    transition: margin .25s, padding .25s, border .25s;
+
+    &:after {
+      @include font-size(42px);
+      font-family: 'Arial', sans-serif;;
+      content: '+';
+      position: absolute;
+      display: block;
+      top: -4px;
+      right: 8px;
+      color: $healthy-orange;
+
+      transition: content .25s, display .25s;
+    }
+
+    &.options--active {
+      border: none;
+      margin-left: 0;
+      margin-right: 0;
+
+      &:after {
+        content: '';
+        display: none;
+      }
+
+      button {
+        color: $base-text-color;
+        text-decoration: none;
+      }
+    }
+  }
+
+  button {
+    padding: $base-spacing-unit $double-spacing-unit;
+    text-decoration: underline;
+    border: none;
+    background: none;
+    color: $healthy-orange;
+
+    transition: color .25s, background .25s, text-decoration .25s;
+
+    &:hover {
+      color: $dark-orange;
+      text-decoration: underline;
+    }
+
+    &:hover, &:active, &:focus {
+      outline: none;
+    }
+  }
+
+  @include breakpoint($breakpoint-alpha) {
+    padding-left: $double-spacing-unit * 2;
+
+    li {
+      display: inline;
+      margin: 0;
+      padding: 0 0 0 $double-spacing-unit;
+      border: none;
+      background: none;
+
+      &:after {
+        content: '';
+        display: none;
+      }
+
+      &.options--active button {
+        border-color: $white;
+        background: $white;
+        color: $healthy-orange;
+      }
+    }
+
+    button {
+      border-radius: 0 $double-spacing-unit 0 0;
+      background: $tab-inactive-background;
+      color: $tab-inactive-text;
+      text-decoration: none;
+
+      &:hover {
+        color: $tab-inactive-text;
+        text-decoration: none;
+      }
+    }
+  }
+}

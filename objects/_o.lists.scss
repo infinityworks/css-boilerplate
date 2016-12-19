@@ -1,0 +1,57 @@
+.inline-list {
+  padding: 0;
+}
+
+.inline-list li {
+	list-style-type: none;
+	display: inline;
+  padding-left: 0;
+	padding-right: 20px;
+
+  &:before {
+    content: '';
+    display: none;
+  }
+}
+
+ul.default {
+	list-style-type: disc;
+	list-style-position: outside;
+  margin: 0;
+	padding-left: $double-spacing-unit;
+
+  li {
+    padding: 0;
+
+    &:before {
+      content: '';
+      display: none;
+    }
+  }
+}
+
+ol.default {
+	list-style-type: decimal;
+	list-style-position: outside;
+	margin-left: 15px;
+
+  li:before {
+    content: '';
+    display: none;
+  }
+}
+
+ul.inline-disc-list {
+  margin-left: 0;
+
+  li {
+    float: left;
+    margin-right: $double-spacing-unit;
+    padding-left: $double-spacing-unit;
+
+    span {
+      position: relative;
+      left: -($double-spacing-unit);
+    }
+  }
+}

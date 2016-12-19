@@ -1,0 +1,67 @@
+html {
+  font:#{($base-font-size / 16px)*1em}/#{$unitless-line-height} sans-serif;
+  overflow-y:scroll;
+  min-height:100%;
+
+  background: $base-background-color;
+  color: $base-text-color;
+  -webkit-font-smoothing:antialiased;
+  -webkit-text-size-adjust:100%;
+      -ms-text-size-adjust:100%;
+}
+
+body {
+  font-family: "co-text";
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: $healthy-orange;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+/*------------------------------------*\
+    $LISTS
+\*------------------------------------*/
+
+ul, ol {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li {
+  position: relative;
+  margin-bottom: $base-spacing-unit;
+  padding-left: $base-spacing-unit*4;
+
+  &:before {
+    position: absolute;
+    content: url(/img/icons/tick.svg);
+    color: $healthy-orange;
+    left: 0;
+  }
+}
+
+/**
+ * Remove vertical spacing from nested lists.
+ */
+li > ul,
+li > ol{
+    margin-bottom: 0;
+}
+
+
+/*------------------------------------*\
+    $IMAGES
+\*------------------------------------*/
+img {
+    max-width:100%;
+    height:auto;
+}
